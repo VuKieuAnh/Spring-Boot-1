@@ -34,4 +34,7 @@ public class Student {
         this.name = name;
         this.avatar = avatar;
     }
+
+    @ManyToOne
+    private Classes classes;
 }

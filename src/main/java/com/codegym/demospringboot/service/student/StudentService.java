@@ -12,6 +12,13 @@ public class StudentService implements IStudentService {
     @Autowired
     private IStudtentRepository studtentRepository;
 
+    public StudentService() {
+    }
+
+    public StudentService(IStudtentRepository studtentRepository){
+        this.studtentRepository = studtentRepository;
+    }
+
     @Override
     public Iterable<Student> findAll() {
         return studtentRepository.findAll();
